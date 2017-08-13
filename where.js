@@ -1,16 +1,24 @@
 
 function getIndexToIns(arr, num) {
   // sort the array 
+  var sortedArr = arr.sort(); 
+
   // define empty index variable 
+  var targetIndex = 0; 
+
   // loop through the array
+  for (var i = 0; i < sortedArr.length; i++) {
     // compare the target num with indexed array
     // if target num is equal or greater than indexed array value 
+
+    if (num < sortedArr[i]) {
       // set the target index var to the i 
-    // elsif target num is less than indexed array val
-      // return the target index var 
-      // or possibly could just return the i - 1 
-    // end 
-    // return the target index var 
+      targetIndex = i;
+    } 
+  }
+
+  // return the target index var if target index is last 
+  return targetIndex;
 }
 
-getIndexToIns([40, 60], 50);
+console.log(getIndexToIns([10, 20, 30, 40, 50], 35));
