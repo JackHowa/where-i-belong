@@ -13,7 +13,7 @@ function getIndexToIns(arr, num) {
 
     if (num < sortedArr[i]) {
       // set the target index var to the i 
-      targetIndex = i;
+      return i;
     } 
   }
 
